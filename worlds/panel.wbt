@@ -1,0 +1,52 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Parquetry.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.11882846724510039 0.025820905900231565 -0.9925790024933387 2.7167162396604776
+  position 1.2319027444470723 0.1754905995455161 0.2018369733546004
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+}
+Solid {
+  translation 0.43 0 0
+  rotation -1 0 0 -1.5599953071795865
+  children [
+    Shape {
+      appearance Parquetry {
+        type "light strip"
+      }
+      geometry IndexedFaceSet {
+        coord Coordinate {
+  point [
+    0.0 0.0 0.0,       # 0: Back-left-bottom
+    0.5 0.0 0.0,       # 1: Front-left-bottom
+    0.5 0.2 0.0,       # 2: Front-left-top
+    0.0 0.0 0.38,      # 3: Back-right-bottom
+    0.5 0.0 0.38,      # 4: Front-right-bottom
+    0.5 0.2 0.38       # 5: Front-right-top
+  ]
+}
+coordIndex [
+  0, 3, 5, 2, -1, # Side 1
+  1, 4, 3, 0, -1, # Bottom
+  2, 5, 4, 1, -1, # Top Slope
+  0, 2, 1, -1,    # Back
+  3, 4, 5, -1     # Front
+]
+        texCoordIndex [
+          0
+        ]
+      }
+    }
+  ]
+}
