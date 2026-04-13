@@ -4,12 +4,13 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Parquetry.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/SolarCell.proto"
 
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.34808548734268446 0.13861646437910105 -0.9271580066549839 2.4342028406028646
-  position 1.740611727798166 0.8709715762924823 1.2241621396488522
+  orientation -0.04080548601791858 -0.039886143480005826 -0.9983706765871753 1.5952659483082237
+  position 0.4686624747069831 0.9504443119266917 0.06239305993456513
 }
 TexturedBackground {
 }
@@ -17,7 +18,7 @@ TexturedBackgroundLight {
 }
 Floor {
 }
-Solid {
+DEF Wedge Solid {
   translation 0.43 0 0
   rotation -1 0 0 -1.5599953071795865
   children [
@@ -47,4 +48,18 @@ Solid {
       }
     }
   ]
+}
+DEF panel Solid {
+  translation 0.709327 -0.176728 0.181519
+  rotation 0 -0.7086825356136587 0.7055275074128545 1.67
+  children [
+    Shape {
+      appearance SolarCell {
+      }
+      geometry Box {
+        size 0.35 0.01 0.3
+      }
+    }
+  ]
+  name "solid(1)"
 }
